@@ -18,3 +18,5 @@ spec:
         name: sup-backend
         ports:
         - containerPort: 80
+        imagePullSecrets:
+          - name: regcred2
