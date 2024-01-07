@@ -14,7 +14,7 @@ spec:
         app: sup-backend
     spec:
       containers:
-      - image: 10.0.16.211:5000/storageup/sup_backend
+      - image: 10.0.16.211:5000/storageup/sup_backend:latest
         name: sup-backend
         ports:
         - containerPort: 80
