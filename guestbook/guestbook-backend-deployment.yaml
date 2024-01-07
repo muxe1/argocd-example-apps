@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: guestbook-backend
+  name: sup_backend
 spec:
   replicas: 1
   revisionHistoryLimit: 6
   selector:
     matchLabels:
-      app: guestbook-backend
+      app: sup_backend
   template:
     metadata:
       labels:
-        app: guestbook-backend
+        app: sup_backend
     spec:
       containers:
-      - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
-        name: guestbook-backend
+      - image: 10.0.16.211:5000/storageup/sup_backend
+        name: sup_backend
         ports:
-        - containerPort: 81
+        - containerPort: 80
