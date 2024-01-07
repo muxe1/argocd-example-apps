@@ -14,9 +14,17 @@ spec:
         app: sup-backend
     spec:
       containers:
-      - image: 10.0.16.211:5000/storageup/sup_backend:latest
-        name: sup-backend
+      - name: sup-backend
+        image: 10.0.16.211:5000/storageup/sup_backend:latest
         ports:
-        - containerPort: 80
+          - name: http
+            containerPort: 80
         imagePullSecrets:
-          - name: regcred2
+          - name: regcred
+        resources:
+        limits:
+          memory: 512Mi
+          cpu: "1"
+        requests:
+          memory: 256Mi
+          cpu: "0.2"
