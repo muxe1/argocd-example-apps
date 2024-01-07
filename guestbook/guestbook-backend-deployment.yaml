@@ -19,6 +19,5 @@ spec:
         ports:
           - name: http
             containerPort: 80
-        restartPolicy: Always
       imagePullSecrets:
       - name: regcred2
