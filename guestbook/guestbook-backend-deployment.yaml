@@ -19,8 +19,6 @@ spec:
         ports:
           - name: http
             containerPort: 80
-        imagePullSecrets:
-          - name: regcred
         resources:
         limits:
           memory: 512Mi
@@ -28,3 +26,5 @@ spec:
         requests:
           memory: 256Mi
           cpu: "0.2"
+        imagePullSecrets:
+          - name: regcred2
